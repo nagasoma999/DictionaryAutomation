@@ -78,7 +78,7 @@ public class DictionaryTest {
     @Test
     public void validateInvalidWord() {
         when(dictService.isEnglishWord("antifa")).thenReturn(isEnglish("antifa"));
-        Assert.assertFalse(dictionary.isEnglishDictionaryWords("antifa"));
+        Assert.assertFalse(dictionary.isEnglishWord("antifa"));
         
     }
     
@@ -86,7 +86,7 @@ public class DictionaryTest {
     @Test
     public void validateWorkingWord() {
         when(dictService.isEnglishWord("working")).thenReturn(isEnglish("working"));
-        Assert.assertTrue(dictionary.isEnglishDictionaryWords("working"));
+        Assert.assertTrue(dictionary.isEnglishWord("working"));
         // Print all possible words
         dictionary.findAllPossibleWords("working");
     }

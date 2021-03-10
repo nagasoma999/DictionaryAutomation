@@ -23,7 +23,7 @@ public class Dictionary  {
      * @param word any given string
      * @return boolean if the word was found in the dictionary
      */
-    public boolean isEnglishDictionaryWords(String word) {
+    public boolean isEnglishWord(String word) {
         return dictService.isEnglishWord(word);
     }
 
